@@ -23,29 +23,10 @@ body {
   font-size: 1.6rem;
   background-color: var(--color-white-100);
   color: var(--color-black-300);
-}
-
-#app {
-  display: grid;
-  grid-template-areas: 
-  "A A A A"
-  "B B B C"
-  "B B B C"
-  "D D D D";
-
-  height: 100vh;
-}
-
-#app header {
-  grid-area: A;
-}
-
-#app main {
-  grid-area: B;
-}
-
-#app footer {
-  grid-area: D;
+  max-width: 43rem;
+  
+  margin-inline: auto;
+  box-sizing: content-box;
 }
 
 header {
@@ -83,7 +64,6 @@ header form {
 
 .input-wrapper input::placeholder {
   color: var(--color-white-100);
-  opacity: 0.56;
 }
 
 .avatar {
@@ -94,6 +74,99 @@ header form {
   border-radius: 50%;
 }
 
-main {
-  max-width: 43rem;
+main h1 {
+  font-size: 2.4rem;
+  line-height: 160%;
+  font-weight: 700;
+
+  margin-bottom: .8rem;
+  
+  color: var(--color-black-100);
+}
+
+main .container {
+  padding: 3.1rem 2.6rem 0rem 2.2rem;
+}
+
+p {
+  margin-top: 3.1rem;
+  margin-bottom: 3.4rem;
+
+  color: var(--color-black-300);
+  font-size: 1.6rem;
+  line-height: 160%;
+  
+}
+
+.container {
+  width: min(112rem, 100%);
+  margin: 0 auto;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  
+}
+
+.sidebar {
+  display: grid;
+  grid-template-areas: 
+  "img h2"
+  "img p";
+
+  gap: 1.6rem;
+
+  overflow: hidden;
+}
+
+.sidebar img {
+  grid-area: img;
+
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+}
+
+.sidebar h2 {
+  font-size: 1.8rem;
+  line-height: 160%;
+  font-weight: 700;
+
+  color: var(--color-black-100);
+
+  grid-area: h2;
+
+  width: auto;
+  height: auto;
+}
+
+.sidebar p {
+  font-size: 1.4rem;
+  line-height: 160%;
+
+  color: var(--color-black-300);
+
+  grid-area: p;
+
+  margin: 0;
+  
+}
+
+footer{
+  background-color: var(--color-green-100);
+
+  height: 6.4rem;
+}
+
+footer p {
+  color: var(--color-white-100);
+
+  text-align: center;
+
+  padding: 2.6rem 1.6rem;
+
+  font-size: 1.6rem;
+  font-weight: 600;
 }
