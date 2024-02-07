@@ -1,0 +1,99 @@
+* {
+  font-family: 'Mulish', sans-serif;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --color-black-100:hsl(240, 6%, 13%);
+  --color-black-300:hsl(240, 5%, 7%);
+  --color-green-100: hsl(195, 46%, 40%);
+  --color-green-300: hsl(195, 91%, 25%);
+  --color-white-100: hsl(0, 0%, 100%);
+  --color-white-300: hsl(196, 100%, 98%);
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--color-white-100);
+  color: var(--color-black-300);
+}
+
+#app {
+  display: grid;
+  grid-template-areas: 
+  "A A A A"
+  "B B B C"
+  "B B B C"
+  "D D D D";
+
+  height: 100vh;
+}
+
+#app header {
+  grid-area: A;
+}
+
+#app main {
+  grid-area: B;
+}
+
+#app footer {
+  grid-area: D;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 2.6rem;
+  padding: 1.6rem 2.8rem;
+
+  font-weight: 600;
+  background-color: var(--color-green-300);
+}
+
+header form {
+  flex: 1;
+}
+
+.input-wrapper label {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 1.2rem 0 1.2rem 1.4rem;
+
+  background-color: var(--color-green-100);
+  border: 0;
+  border-radius: .4rem;
+
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.input-wrapper input::placeholder {
+  color: var(--color-white-100);
+  opacity: 0.56;
+}
+
+.avatar {
+  width: 4.2rem;
+  height: 4.2rem;
+  object-fit: cover;
+
+  border-radius: 50%;
+}
+
+main {
+  max-width: 43rem;
+}
